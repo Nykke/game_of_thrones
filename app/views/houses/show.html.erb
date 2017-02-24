@@ -1,0 +1,13 @@
+<h2><%= @house.name %></h2>
+
+<% @house.characters.each do |character| %>
+<h3><span><%= link_to "Edit Character", edit_house_character_path(@house, character)%></span></h3>
+<h3><span><%= link_to "Add Character", new_house_character_path(@house,character)%></span></h3>
+
+<div>
+  <h3><%= character.name %></h3>
+  <img src="<%= character.img_url %>">
+</div>
+<% end %>
+
+<h3><span><%= link_to "Edit House", edit_house_path %></span></h3>

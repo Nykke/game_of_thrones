@@ -1,0 +1,10 @@
+<h2>FAMILY HOUSES</h2>
+<h3><span><%= link_to "Add House", new_house_path %></span></h3>
+
+<% @houses.each do |house| %>
+
+<div>
+  <h3><%= link_to house.name, house %></h3>
+  <img src="<%= house.img_url %>">
+</div>
+<% end %>
